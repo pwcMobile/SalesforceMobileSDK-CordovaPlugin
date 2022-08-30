@@ -58,7 +58,7 @@
     [SalesforceHybridSDKManager sharedManager].isDevSupportEnabled = NO;
 #endif
 
-    
+    [[SalesforceHybridSDKManager sharedManager] setUseSnapshotView:NO];
     //App Setup for any changes to the current authenticated user
     __weak __typeof (self) weakSelf = self;
     [SFSDKAuthHelper registerBlockForCurrentUserChangeNotifications:^{
